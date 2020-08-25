@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alexa.Web.Dk", "Alexa.Web.Dk\Alexa.Web.Dk.csproj", "{00A313C0-CE84-4650-8371-9806149447C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00A313C0-CE84-4650-8371-9806149447C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00A313C0-CE84-4650-8371-9806149447C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00A313C0-CE84-4650-8371-9806149447C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00A313C0-CE84-4650-8371-9806149447C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F414C23-0BCB-4852-B5A6-E225C2D828C8}
+	EndGlobalSection
+EndGlobal

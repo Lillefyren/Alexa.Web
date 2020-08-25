@@ -1,0 +1,29 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+    Layout = null;
+    var INC = "Website/Global";
+}
+<!doctype html>
+
+<html lang="da">
+<head>
+    
+    @Html.Partial($"{INC}/Head")
+    @Html.Partial($"{INC}/Css")
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 bg-light full-height">
+                @Html.Partial($"{INC}/Sidebar")
+            </div>
+            <div class="col-md-10">
+                <h1>@(Model.Name)</h1>
+                @RenderBody()
+                @Html.Partial($"{INC}/JS")
+            </div>
+        </div>
+    </div>
+</body>
+</html>

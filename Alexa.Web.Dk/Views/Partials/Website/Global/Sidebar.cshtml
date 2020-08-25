@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+<div class="logo text-center pt-4 pb-4 mb-5">
+    <a href="/"><img src="/media/2hcjwvsi/aa-logo.png?width=200" alt="Alex Andersen" /></a>
+</div>
+<ul class="list-group">
+    @foreach(var page in Model.Root().Children())
+    {
+        <li class="list-group-item"><a href="@(page.Url)">@(page.Name)</a></li>
+    }
+</ul>
