@@ -6,8 +6,8 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "bd29fa9242c7dd60")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "ae0518774ee10041")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 
 // FILE: models.generated.cs
@@ -1634,7 +1634,7 @@ namespace Umbraco.Web.PublishedModels
 
 	/// <summary>ContentPage</summary>
 	[PublishedModel("contentPage")]
-	public partial class ContentPage : PublishedContentModel, IAaContent, IAaHeadline, IMetadata, INavigation, IPageImage
+	public partial class ContentPage : PublishedContentModel, IAaContent, IAaHeadline, IAaSummary, IMetadata, INavigation, IPageImage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -1670,6 +1670,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("headline")]
 		public string Headline => global::Umbraco.Web.PublishedModels.AaHeadline.GetHeadline(this);
+
+		///<summary>
+		/// Summary
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("summary")]
+		public string Summary => global::Umbraco.Web.PublishedModels.AaSummary.GetSummary(this);
 
 		///<summary>
 		/// Hide SE
