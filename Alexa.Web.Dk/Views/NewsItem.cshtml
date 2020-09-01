@@ -3,3 +3,11 @@
 @{
 	Layout = "siteMaster.cshtml";
 }
+
+@{var myTag = Model.Value<IPublishedContent>("newsTag");}
+
+
+<a href="..">Tilbage til nyheder</a>
+
+<p>@myTag.Name</p>
+

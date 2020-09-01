@@ -4,3 +4,12 @@
 	Layout = "siteMaster.cshtml";
 }
 <h2>Contact page</h2>
+
+@{var myChildren = Model.Children;}
+
+<ul>
+@foreach(var child in myChildren)
+	{
+		<li><a href="@child.Url"> @child.Name</a></li>
+	}
+</ul>

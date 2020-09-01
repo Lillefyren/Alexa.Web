@@ -1,0 +1,26 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.HistoryPage>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "siteMaster.cshtml";
+}
+
+@{
+    var items = Model.Value<IEnumerable<IPublishedElement>>("HistoryBoxes");
+    string imgAlign = "";
+
+    foreach(HistoryBox item in items)
+    {
+    
+    if(item.LeftRight == false)
+    {
+    imgAlign = "float:Left";
+    }else
+    {
+    imgAlign = "float:Right";
+    }
+    
+        <h2>@item.Value("yearTitle")</h2>
+        <p>@item.Value("contents")</p>
+        <img style="@imgAlign; width:20%;" src="@item.HistoryPicture.Url">
+    }
+}

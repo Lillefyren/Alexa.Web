@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.DepartmentsPage>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "siteMaster.cshtml";
+}
+
+@{var aaDepartmentsList = Umbraco.Content(Guid.Parse("f36f2d4a-afbb-43e7-803c-133c4fa9cd78"))
+    .Children
+    .Where(x => x.IsVisible());
+    }
+
+@{
+	foreach (var department in aaDepartmentsList)
+	{
+		<li><p>@department.Name</p></li>
+		}
+	}
+

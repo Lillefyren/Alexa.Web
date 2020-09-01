@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.EmployeePage>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "siteMaster.cshtml";
+}
+
+@* Employee Data *@
+@{
+	var aaEmployees = Umbraco.Content(Guid.Parse("dc39e456-4123-4143-b094-fefad06f6317"))
+    .Children<Contact>()
+    .Where(x => x.IsVisible());
+}
+
+<hr></hr>
+
+<ul style="Width:20%;">
+	@foreach (var employee in aaEmployees)
+	{
+		<li style="Background-color: lightgrey; margin-top:10px;">
+			<h3>@employee.Name</h3>
+			<h4>@employee.Title</h4>
+			<img style="width:60%;" src="@employee.Picture.Url"/>
+			<h3 style="Color:Green;">+45 @employee.Phone</h3>
+			<a href="@employee.Email" style="Background-color:LightGreen;">Send en mail</a>
+		</li>
+	}
+</ul>
+

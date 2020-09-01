@@ -4,3 +4,19 @@
 	Layout = "siteMaster.cshtml";
 }
 <h2>Nyheder</h2>
+
+
+@{
+	var selection = Umbraco.Content(Guid.Parse("5f3c1f52-8b4b-4951-9986-22315fb3d89c"))
+    .Children()
+    .Where(x => x.IsVisible());
+}
+<ul>
+	@foreach (var item in selection)
+	{
+		<li>
+			<a href="@item.Url">@item.Name</a>
+		</li>
+	}
+</ul>
+

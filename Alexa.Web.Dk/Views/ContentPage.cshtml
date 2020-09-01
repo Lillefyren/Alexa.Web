@@ -4,3 +4,10 @@
 	Layout = "siteMaster.cshtml";
 }
 <h2>Content</h2>
+
+<ul>
+    @foreach(var item in Model.Children)
+    {
+        <li><a href="@item.Url">@item.Name</a></li>
+    }
+</ul>

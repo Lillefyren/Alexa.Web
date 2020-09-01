@@ -3,4 +3,27 @@
 @{
 	Layout = "siteMaster.cshtml";
 }
-<h2>Service</h2>
+
+<h2>@Model.Value("title")</h2>
+
+<h1>@Model.Value("headline")</h1>
+
+<p>@Model.Value("bodyText")</p>
+
+<p>@Model.Value("buttonText")</p>
+
+@{
+    IPublishedContent typedContentPicker = Model.Value<IPublishedContent>("serviceBgImg");
+}
+<div style="background-image:url(@typedContentPicker.Url); background-position:center; background-size:cover; background-color:lightgrey;">
+    <h3>@Model.Value("serviceTitle")</h3>
+    <p>@Model.Value("serviceContent")</p>
+</div>
+
+<div style="background-color:black; width:80%; margin:auto;">
+    @{Contact firstContact = Model.Value<Contact>("firstEmployee");}
+    <img src="@firstContact.Picture.Url" width="20%">
+    
+    @{Contact secondContact = Model.Value<Contact>("secondEmployee");}
+    <img src="@secondContact.Picture.Url" width="20%">
+</div>
