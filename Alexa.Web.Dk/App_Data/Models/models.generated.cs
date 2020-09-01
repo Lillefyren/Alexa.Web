@@ -17,8 +17,8 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "d9bd628b419ac759")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.3")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "bd29fa9242c7dd60")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -994,35 +994,35 @@ namespace Umbraco.Web.PublishedModels
 		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Navigation.GetUmbracoNaviHide(this);
 
 		///<summary>
-		/// image
+		/// image: Billede repræsentation af denne service
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("image")]
 		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent Image => global::Umbraco.Web.PublishedModels.ServiceBox.GetImage(this);
 
 		///<summary>
-		/// link
+		/// link: Link til underside om denne service
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("link")]
 		public global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.Models.Link> Link => global::Umbraco.Web.PublishedModels.ServiceBox.GetLink(this);
 
 		///<summary>
-		/// ServiceTitle
+		/// ServiceTitle: Navnet på denne service
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("serviceTitle")]
 		public string ServiceTitle => global::Umbraco.Web.PublishedModels.ServiceBox.GetServiceTitle(this);
 
 		///<summary>
-		/// Summary
+		/// Summary: Kort tekst om denne service
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("summary")]
 		public string Summary => global::Umbraco.Web.PublishedModels.ServiceBox.GetSummary(this);
 
 		///<summary>
-		/// Boxes
+		/// Boxes: Hver service kan tilføjes her
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("boxes")]
@@ -1344,7 +1344,7 @@ namespace Umbraco.Web.PublishedModels
 
 	/// <summary>Service</summary>
 	[PublishedModel("service")]
-	public partial class Service : PublishedContentModel, IAskUsBox, IBigLinkBtn, IMetadata, INavigation, IPageImage, IAaContent, IAaHeadline, IAaTitle
+	public partial class Service : PublishedContentModel, IAaContent, IAaHeadline, IAaTitle, IAskUsBox, IBigLinkBtn, IMetadata, INavigation, IPageImage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -1368,42 +1368,63 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// ServiceBgImg
+		/// ServiceBgImg: Billedet der repræsentere services, bag ved paragrafen
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("serviceBgImg")]
 		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent ServiceBgImg => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("serviceBgImg");
 
 		///<summary>
-		/// ServiceContent
+		/// ServiceContent: Indhold i den mørke andel af siden
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("serviceContent")]
 		public global::System.Web.IHtmlString ServiceContent => this.Value<global::System.Web.IHtmlString>("serviceContent");
 
 		///<summary>
-		/// ServiceTitle
+		/// ServiceTitle: Undertitel til den mørke andel af siden
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("serviceTitle")]
 		public string ServiceTitle => this.Value<string>("serviceTitle");
 
 		///<summary>
-		/// AskTitle
+		/// Body text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("bodyText")]
+		public global::System.Web.IHtmlString BodyText => global::Umbraco.Web.PublishedModels.AaContent.GetBodyText(this);
+
+		///<summary>
+		/// Headline
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("headline")]
+		public string Headline => global::Umbraco.Web.PublishedModels.AaHeadline.GetHeadline(this);
+
+		///<summary>
+		/// Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("title")]
+		public string Title => global::Umbraco.Web.PublishedModels.AaTitle.GetTitle(this);
+
+		///<summary>
+		/// AskTitle: Texten over de to medarbejdere
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("askTitle")]
 		public string AskTitle => global::Umbraco.Web.PublishedModels.AskUsBox.GetAskTitle(this);
 
 		///<summary>
-		/// FirstEmployee
+		/// FirstEmployee: Medarbejderen til venstre i boksen
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("firstEmployee")]
 		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent FirstEmployee => global::Umbraco.Web.PublishedModels.AskUsBox.GetFirstEmployee(this);
 
 		///<summary>
-		/// SecondEmployee
+		/// SecondEmployee: Medarbejderen til højre i boksen
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("secondEmployee")]
@@ -1492,32 +1513,11 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("topImage")]
 		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent TopImage => global::Umbraco.Web.PublishedModels.PageImage.GetTopImage(this);
-
-		///<summary>
-		/// Body text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("bodyText")]
-		public global::System.Web.IHtmlString BodyText => global::Umbraco.Web.PublishedModels.AaContent.GetBodyText(this);
-
-		///<summary>
-		/// Headline
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("headline")]
-		public string Headline => global::Umbraco.Web.PublishedModels.AaHeadline.GetHeadline(this);
-
-		///<summary>
-		/// Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("title")]
-		public string Title => global::Umbraco.Web.PublishedModels.AaTitle.GetTitle(this);
 	}
 
 	/// <summary>Services</summary>
 	[PublishedModel("services")]
-	public partial class Services : PublishedContentModel, IMetadata, INavigation, IServicesSection, IAaContent, IAaHeadline, IAaSummary
+	public partial class Services : PublishedContentModel, IAaContent, IAaHeadline, IAaSummary, IMetadata, INavigation, IServicesSection
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -1539,6 +1539,27 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Body text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("bodyText")]
+		public global::System.Web.IHtmlString BodyText => global::Umbraco.Web.PublishedModels.AaContent.GetBodyText(this);
+
+		///<summary>
+		/// Headline
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("headline")]
+		public string Headline => global::Umbraco.Web.PublishedModels.AaHeadline.GetHeadline(this);
+
+		///<summary>
+		/// Summary
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("summary")]
+		public string Summary => global::Umbraco.Web.PublishedModels.AaSummary.GetSummary(this);
 
 		///<summary>
 		/// Hide SE
@@ -1583,7 +1604,7 @@ namespace Umbraco.Web.PublishedModels
 		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Navigation.GetUmbracoNaviHide(this);
 
 		///<summary>
-		/// Boxes
+		/// Boxes: Hver service kan tilføjes her
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("boxes")]
@@ -1595,32 +1616,11 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("title")]
 		public string Title => global::Umbraco.Web.PublishedModels.ServicesSection.GetTitle(this);
-
-		///<summary>
-		/// Body text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("bodyText")]
-		public global::System.Web.IHtmlString BodyText => global::Umbraco.Web.PublishedModels.AaContent.GetBodyText(this);
-
-		///<summary>
-		/// Headline
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("headline")]
-		public string Headline => global::Umbraco.Web.PublishedModels.AaHeadline.GetHeadline(this);
-
-		///<summary>
-		/// Summary
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("summary")]
-		public string Summary => global::Umbraco.Web.PublishedModels.AaSummary.GetSummary(this);
 	}
 
 	/// <summary>ContentPage</summary>
 	[PublishedModel("contentPage")]
-	public partial class ContentPage : PublishedContentModel, IMetadata, INavigation, IPageImage, IAaContent, IAaHeadline
+	public partial class ContentPage : PublishedContentModel, IAaContent, IAaHeadline, IMetadata, INavigation, IPageImage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -1642,6 +1642,20 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Body text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("bodyText")]
+		public global::System.Web.IHtmlString BodyText => global::Umbraco.Web.PublishedModels.AaContent.GetBodyText(this);
+
+		///<summary>
+		/// Headline
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("headline")]
+		public string Headline => global::Umbraco.Web.PublishedModels.AaHeadline.GetHeadline(this);
 
 		///<summary>
 		/// Hide SE
@@ -1705,25 +1719,11 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("topImage")]
 		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent TopImage => global::Umbraco.Web.PublishedModels.PageImage.GetTopImage(this);
-
-		///<summary>
-		/// Body text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("bodyText")]
-		public global::System.Web.IHtmlString BodyText => global::Umbraco.Web.PublishedModels.AaContent.GetBodyText(this);
-
-		///<summary>
-		/// Headline
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("headline")]
-		public string Headline => global::Umbraco.Web.PublishedModels.AaHeadline.GetHeadline(this);
 	}
 
 	/// <summary>NewsItem</summary>
 	[PublishedModel("newsItem")]
-	public partial class NewsItem : PublishedContentModel, IMetadata, INavigation, IAaContent, IAaHeadline, IAaSummary
+	public partial class NewsItem : PublishedContentModel, IAaContent, IAaHeadline, IAaSummary, IMetadata, INavigation, IPageImage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -1754,6 +1754,27 @@ namespace Umbraco.Web.PublishedModels
 		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent NewsTag => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("newsTag");
 
 		///<summary>
+		/// Body text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("bodyText")]
+		public global::System.Web.IHtmlString BodyText => global::Umbraco.Web.PublishedModels.AaContent.GetBodyText(this);
+
+		///<summary>
+		/// Headline
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("headline")]
+		public string Headline => global::Umbraco.Web.PublishedModels.AaHeadline.GetHeadline(this);
+
+		///<summary>
+		/// Summary
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("summary")]
+		public string Summary => global::Umbraco.Web.PublishedModels.AaSummary.GetSummary(this);
+
+		///<summary>
 		/// Hide SE
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
@@ -1796,30 +1817,30 @@ namespace Umbraco.Web.PublishedModels
 		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Navigation.GetUmbracoNaviHide(this);
 
 		///<summary>
-		/// Body text
+		/// Bottom image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("bodyText")]
-		public global::System.Web.IHtmlString BodyText => global::Umbraco.Web.PublishedModels.AaContent.GetBodyText(this);
+		[ImplementPropertyType("bottomImage")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent BottomImage => global::Umbraco.Web.PublishedModels.PageImage.GetBottomImage(this);
 
 		///<summary>
-		/// Headline
+		/// Image text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("headline")]
-		public string Headline => global::Umbraco.Web.PublishedModels.AaHeadline.GetHeadline(this);
+		[ImplementPropertyType("imageText")]
+		public string ImageText => global::Umbraco.Web.PublishedModels.PageImage.GetImageText(this);
 
 		///<summary>
-		/// Summary
+		/// Top image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("summary")]
-		public string Summary => global::Umbraco.Web.PublishedModels.AaSummary.GetSummary(this);
+		[ImplementPropertyType("topImage")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent TopImage => global::Umbraco.Web.PublishedModels.PageImage.GetTopImage(this);
 	}
 
 	/// <summary>NewsContainer</summary>
 	[PublishedModel("newsContainer")]
-	public partial class NewsContainer : PublishedContentModel, IMetadata, INavigation, IAaHeadline
+	public partial class NewsContainer : PublishedContentModel, IAaHeadline, IBigTxtLinkBtn, IMetadata, INavigation
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -1843,6 +1864,41 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// Headline
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("headline")]
+		public string Headline => global::Umbraco.Web.PublishedModels.AaHeadline.GetHeadline(this);
+
+		///<summary>
+		/// Button color
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("buttonColor")]
+		public string ButtonColor => global::Umbraco.Web.PublishedModels.BigTxtLinkBtn.GetButtonColor(this);
+
+		///<summary>
+		/// Button link
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("buttonLink")]
+		public global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.Models.Link> ButtonLink => global::Umbraco.Web.PublishedModels.BigTxtLinkBtn.GetButtonLink(this);
+
+		///<summary>
+		/// Button text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("buttonText")]
+		public string ButtonText => global::Umbraco.Web.PublishedModels.BigTxtLinkBtn.GetButtonText(this);
+
+		///<summary>
+		/// Button title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("buttonTitle")]
+		public string ButtonTitle => global::Umbraco.Web.PublishedModels.BigTxtLinkBtn.GetButtonTitle(this);
+
+		///<summary>
 		/// Hide SE
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
@@ -1883,13 +1939,6 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("umbracoNaviHide")]
 		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Navigation.GetUmbracoNaviHide(this);
-
-		///<summary>
-		/// Headline
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("headline")]
-		public string Headline => global::Umbraco.Web.PublishedModels.AaHeadline.GetHeadline(this);
 	}
 
 	/// <summary>SiteSection</summary>
@@ -2018,7 +2067,7 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Boxes
+		/// Boxes: Hver service kan tilføjes her
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("boxes")]
@@ -2087,7 +2136,7 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// image
+		/// image: Billede repræsentation af denne service
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("image")]
@@ -2098,7 +2147,7 @@ namespace Umbraco.Web.PublishedModels
 		public static global::Umbraco.Core.Models.PublishedContent.IPublishedContent GetImage(IServiceBox that) => that.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("image");
 
 		///<summary>
-		/// link
+		/// link: Link til underside om denne service
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("link")]
@@ -2109,7 +2158,7 @@ namespace Umbraco.Web.PublishedModels
 		public static global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.Models.Link> GetLink(IServiceBox that) => that.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.Models.Link>>("link");
 
 		///<summary>
-		/// ServiceTitle
+		/// ServiceTitle: Navnet på denne service
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("serviceTitle")]
@@ -2120,7 +2169,7 @@ namespace Umbraco.Web.PublishedModels
 		public static string GetServiceTitle(IServiceBox that) => that.Value<string>("serviceTitle");
 
 		///<summary>
-		/// Summary
+		/// Summary: Kort tekst om denne service
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("summary")]
@@ -2224,7 +2273,7 @@ namespace Umbraco.Web.PublishedModels
 
 	/// <summary>BigServiceBox</summary>
 	[PublishedModel("bigServiceBox")]
-	public partial class BigServiceBox : PublishedElementModel, ILinkBtn, IAaSinglePicture, IAaSummary, IAaTitle
+	public partial class BigServiceBox : PublishedElementModel, IAaSinglePicture, IAaSummary, IAaTitle, ILinkBtn
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -2248,27 +2297,6 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Button color
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("buttonColor")]
-		public string ButtonColor => global::Umbraco.Web.PublishedModels.LinkBtn.GetButtonColor(this);
-
-		///<summary>
-		/// Button link
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("buttonLink")]
-		public global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.Models.Link> ButtonLink => global::Umbraco.Web.PublishedModels.LinkBtn.GetButtonLink(this);
-
-		///<summary>
-		/// Button text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("buttonText")]
-		public string ButtonText => global::Umbraco.Web.PublishedModels.LinkBtn.GetButtonText(this);
-
-		///<summary>
 		/// Picture
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
@@ -2288,11 +2316,32 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("title")]
 		public string Title => global::Umbraco.Web.PublishedModels.AaTitle.GetTitle(this);
+
+		///<summary>
+		/// Button color
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("buttonColor")]
+		public string ButtonColor => global::Umbraco.Web.PublishedModels.LinkBtn.GetButtonColor(this);
+
+		///<summary>
+		/// Button link
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("buttonLink")]
+		public global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.Models.Link> ButtonLink => global::Umbraco.Web.PublishedModels.LinkBtn.GetButtonLink(this);
+
+		///<summary>
+		/// Button text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("buttonText")]
+		public string ButtonText => global::Umbraco.Web.PublishedModels.LinkBtn.GetButtonText(this);
 	}
 
 	/// <summary>ContactPage</summary>
 	[PublishedModel("contactPage")]
-	public partial class ContactPage : PublishedContentModel, IMetadata, INavigation, IAaContent, IAaHeadline, IAaSummary
+	public partial class ContactPage : PublishedContentModel, IAaContent, IAaHeadline, IAaSummary, IMetadata, INavigation, IPageImage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -2314,6 +2363,27 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Body text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("bodyText")]
+		public global::System.Web.IHtmlString BodyText => global::Umbraco.Web.PublishedModels.AaContent.GetBodyText(this);
+
+		///<summary>
+		/// Headline
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("headline")]
+		public string Headline => global::Umbraco.Web.PublishedModels.AaHeadline.GetHeadline(this);
+
+		///<summary>
+		/// Summary
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("summary")]
+		public string Summary => global::Umbraco.Web.PublishedModels.AaSummary.GetSummary(this);
 
 		///<summary>
 		/// Hide SE
@@ -2358,30 +2428,30 @@ namespace Umbraco.Web.PublishedModels
 		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Navigation.GetUmbracoNaviHide(this);
 
 		///<summary>
-		/// Body text
+		/// Bottom image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("bodyText")]
-		public global::System.Web.IHtmlString BodyText => global::Umbraco.Web.PublishedModels.AaContent.GetBodyText(this);
+		[ImplementPropertyType("bottomImage")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent BottomImage => global::Umbraco.Web.PublishedModels.PageImage.GetBottomImage(this);
 
 		///<summary>
-		/// Headline
+		/// Image text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("headline")]
-		public string Headline => global::Umbraco.Web.PublishedModels.AaHeadline.GetHeadline(this);
+		[ImplementPropertyType("imageText")]
+		public string ImageText => global::Umbraco.Web.PublishedModels.PageImage.GetImageText(this);
 
 		///<summary>
-		/// Summary
+		/// Top image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("summary")]
-		public string Summary => global::Umbraco.Web.PublishedModels.AaSummary.GetSummary(this);
+		[ImplementPropertyType("topImage")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent TopImage => global::Umbraco.Web.PublishedModels.PageImage.GetTopImage(this);
 	}
 
 	/// <summary>DepartmentsPage</summary>
 	[PublishedModel("departmentsPage")]
-	public partial class DepartmentsPage : PublishedContentModel, IBigTxtLinkBtn, IMetadata, INavigation, IAaContent, IAaTitle
+	public partial class DepartmentsPage : PublishedContentModel, IAaContent, IAaTitle, IBigTxtLinkBtn, IMetadata, INavigation
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -2403,6 +2473,20 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Body text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("bodyText")]
+		public global::System.Web.IHtmlString BodyText => global::Umbraco.Web.PublishedModels.AaContent.GetBodyText(this);
+
+		///<summary>
+		/// Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("title")]
+		public string Title => global::Umbraco.Web.PublishedModels.AaTitle.GetTitle(this);
 
 		///<summary>
 		/// Button color
@@ -2473,20 +2557,6 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("umbracoNaviHide")]
 		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Navigation.GetUmbracoNaviHide(this);
-
-		///<summary>
-		/// Body text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("bodyText")]
-		public global::System.Web.IHtmlString BodyText => global::Umbraco.Web.PublishedModels.AaContent.GetBodyText(this);
-
-		///<summary>
-		/// Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("title")]
-		public string Title => global::Umbraco.Web.PublishedModels.AaTitle.GetTitle(this);
 	}
 
 	// Mixin Content Type with alias "askUsBox"
@@ -2532,7 +2602,7 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// AskTitle
+		/// AskTitle: Texten over de to medarbejdere
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("askTitle")]
@@ -2543,7 +2613,7 @@ namespace Umbraco.Web.PublishedModels
 		public static string GetAskTitle(IAskUsBox that) => that.Value<string>("askTitle");
 
 		///<summary>
-		/// FirstEmployee
+		/// FirstEmployee: Medarbejderen til venstre i boksen
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("firstEmployee")]
@@ -2554,7 +2624,7 @@ namespace Umbraco.Web.PublishedModels
 		public static global::Umbraco.Core.Models.PublishedContent.IPublishedContent GetFirstEmployee(IAskUsBox that) => that.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("firstEmployee");
 
 		///<summary>
-		/// SecondEmployee
+		/// SecondEmployee: Medarbejderen til højre i boksen
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("secondEmployee")]
@@ -2567,7 +2637,7 @@ namespace Umbraco.Web.PublishedModels
 
 	/// <summary>HistoryPage</summary>
 	[PublishedModel("historyPage")]
-	public partial class HistoryPage : PublishedContentModel, IMetadata, INavigation, IPageImage, IAaContent, IAaSummary, IAaTitle
+	public partial class HistoryPage : PublishedContentModel, IAaContent, IAaSummary, IAaTitle, IMetadata, INavigation, IPageImage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -2591,11 +2661,32 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// HistoryBoxes
+		/// HistoryBoxes: Det primære indhold, hver HistoryBox er en kasse med billede, årstal og paragraf
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("historyBoxes")]
 		public global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.PublishedModels.HistoryBox> HistoryBoxes => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.PublishedModels.HistoryBox>>("historyBoxes");
+
+		///<summary>
+		/// Body text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("bodyText")]
+		public global::System.Web.IHtmlString BodyText => global::Umbraco.Web.PublishedModels.AaContent.GetBodyText(this);
+
+		///<summary>
+		/// Summary
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("summary")]
+		public string Summary => global::Umbraco.Web.PublishedModels.AaSummary.GetSummary(this);
+
+		///<summary>
+		/// Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("title")]
+		public string Title => global::Umbraco.Web.PublishedModels.AaTitle.GetTitle(this);
 
 		///<summary>
 		/// Hide SE
@@ -2659,27 +2750,6 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("topImage")]
 		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent TopImage => global::Umbraco.Web.PublishedModels.PageImage.GetTopImage(this);
-
-		///<summary>
-		/// Body text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("bodyText")]
-		public global::System.Web.IHtmlString BodyText => global::Umbraco.Web.PublishedModels.AaContent.GetBodyText(this);
-
-		///<summary>
-		/// Summary
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("summary")]
-		public string Summary => global::Umbraco.Web.PublishedModels.AaSummary.GetSummary(this);
-
-		///<summary>
-		/// Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("title")]
-		public string Title => global::Umbraco.Web.PublishedModels.AaTitle.GetTitle(this);
 	}
 
 	/// <summary>HistoryBox</summary>
@@ -2708,28 +2778,28 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Contents
+		/// Contents: Teksten som vises i kassen
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("contents")]
 		public global::System.Web.IHtmlString Contents => this.Value<global::System.Web.IHtmlString>("contents");
 
 		///<summary>
-		/// HistoryPicture
+		/// HistoryPicture: Billedet som repræsentere denne del af historien
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("historyPicture")]
 		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent HistoryPicture => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("historyPicture");
 
 		///<summary>
-		/// LeftRight: False=Left,True=Right
+		/// LeftRight: False=Billede til venstre, True=Billede til højre
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("leftRight")]
 		public bool LeftRight => this.Value<bool>("leftRight");
 
 		///<summary>
-		/// YearTitle
+		/// YearTitle: Årstal i stor grøn tekst
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("yearTitle")]
@@ -2738,7 +2808,7 @@ namespace Umbraco.Web.PublishedModels
 
 	/// <summary>EmployeePage</summary>
 	[PublishedModel("employeePage")]
-	public partial class EmployeePage : PublishedContentModel, IMetadata, INavigation, IAaContent, IAaSummary, IAaTitle
+	public partial class EmployeePage : PublishedContentModel, IAaContent, IAaSinglePicture, IAaSummary, IAaTitle, IBigTxtLinkBtn, IMetadata, INavigation
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -2760,6 +2830,62 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Body text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("bodyText")]
+		public global::System.Web.IHtmlString BodyText => global::Umbraco.Web.PublishedModels.AaContent.GetBodyText(this);
+
+		///<summary>
+		/// Picture
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("picture")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent Picture => global::Umbraco.Web.PublishedModels.AaSinglePicture.GetPicture(this);
+
+		///<summary>
+		/// Summary
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("summary")]
+		public string Summary => global::Umbraco.Web.PublishedModels.AaSummary.GetSummary(this);
+
+		///<summary>
+		/// Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("title")]
+		public string Title => global::Umbraco.Web.PublishedModels.AaTitle.GetTitle(this);
+
+		///<summary>
+		/// Button color
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("buttonColor")]
+		public string ButtonColor => global::Umbraco.Web.PublishedModels.BigTxtLinkBtn.GetButtonColor(this);
+
+		///<summary>
+		/// Button link
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("buttonLink")]
+		public global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.Models.Link> ButtonLink => global::Umbraco.Web.PublishedModels.BigTxtLinkBtn.GetButtonLink(this);
+
+		///<summary>
+		/// Button text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("buttonText")]
+		public string ButtonText => global::Umbraco.Web.PublishedModels.BigTxtLinkBtn.GetButtonText(this);
+
+		///<summary>
+		/// Button title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
+		[ImplementPropertyType("buttonTitle")]
+		public string ButtonTitle => global::Umbraco.Web.PublishedModels.BigTxtLinkBtn.GetButtonTitle(this);
 
 		///<summary>
 		/// Hide SE
@@ -2802,27 +2928,6 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
 		[ImplementPropertyType("umbracoNaviHide")]
 		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Navigation.GetUmbracoNaviHide(this);
-
-		///<summary>
-		/// Body text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("bodyText")]
-		public global::System.Web.IHtmlString BodyText => global::Umbraco.Web.PublishedModels.AaContent.GetBodyText(this);
-
-		///<summary>
-		/// Summary
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("summary")]
-		public string Summary => global::Umbraco.Web.PublishedModels.AaSummary.GetSummary(this);
-
-		///<summary>
-		/// Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.4")]
-		[ImplementPropertyType("title")]
-		public string Title => global::Umbraco.Web.PublishedModels.AaTitle.GetTitle(this);
 	}
 
 	/// <summary>Folder</summary>
