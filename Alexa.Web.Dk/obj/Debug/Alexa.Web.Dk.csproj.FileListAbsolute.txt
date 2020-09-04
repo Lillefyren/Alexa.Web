@@ -217,7 +217,6 @@ H:\Website Git\Alexa.Web\Alexa.Web.Dk\bin\x86\sqlceer40EN.dll
 H:\Website Git\Alexa.Web\Alexa.Web.Dk\bin\x86\sqlceme40.dll
 H:\Website Git\Alexa.Web\Alexa.Web.Dk\bin\x86\sqlceqp40.dll
 H:\Website Git\Alexa.Web\Alexa.Web.Dk\bin\x86\sqlcese40.dll
-H:\Website Git\Alexa.Web\Alexa.Web.Dk\bin\Alexa.Web.Dk.dll.config
 H:\Website Git\Alexa.Web\Alexa.Web.Dk\bin\Alexa.Web.Dk.dll
 H:\Website Git\Alexa.Web\Alexa.Web.Dk\bin\Alexa.Web.Dk.pdb
 H:\Website Git\Alexa.Web\Alexa.Web.Dk\bin\roslyn\csc.exe
@@ -404,3 +403,5 @@ H:\Website Git\Alexa.Web\Alexa.Web.Dk\obj\Debug\Alexa.Web.Dk.csproj.CoreCompileI
 H:\Website Git\Alexa.Web\Alexa.Web.Dk\obj\Debug\Alexa.Web.Dk.csproj.CopyComplete
 H:\Website Git\Alexa.Web\Alexa.Web.Dk\obj\Debug\Alexa.Web.Dk.dll
 H:\Website Git\Alexa.Web\Alexa.Web.Dk\obj\Debug\Alexa.Web.Dk.pdb
+H:\Website Git\Alexa.Web\Alexa.Web.Dk\bin\System.Buffers.dll
+H:\Website Git\Alexa.Web\Alexa.Web.Dk\bin\System.Runtime.CompilerServices.Unsafe.dll
